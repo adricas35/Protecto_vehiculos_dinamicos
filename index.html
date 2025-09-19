@@ -21,38 +21,37 @@
                     <!-- Foto (URL) -->
                     <div class="mb-3">
                         <label for="foto" class="form-label">Foto (URL)</label>
-                        <input type="url" class="form-control"  placeholder="https://ejemplo.com/auto.jpg"
-                            required>
+                        <input type="url" class="form-control"  placeholder="https://ejemplo.com/auto.jpg" name="foto">
                     </div>
 
                     <!-- Nombre -->
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control"  placeholder="Ej: Corolla" required>
+                        <input type="text" class="form-control"  placeholder="Ej: Corolla" required name="nombre" >
                     </div>
 
                     <!-- Marca -->
                     <div class="mb-3">
                         <label for="marca" class="form-label">Marca</label>
-                        <input type="text" class="form-control"  placeholder="Ej: Toyota" required>
+                        <input type="text" class="form-control"  placeholder="Ej: Toyota" required name="marca" >
                     </div>
 
                     <!-- Modelo -->
                     <div class="mb-3">
                         <label for="modelo" class="form-label">Modelo</label>
-                        <input type="text" class="form-control"  placeholder="Ej: 2021" required>
+                        <input type="text" class="form-control"  placeholder="Ej: 2021" required name="modelo" >
                     </div>
 
                     <!-- Kilometraje -->
                     <div class="mb-3">
                         <label for="kilometraje" class="form-label">Kilometraje</label>
-                        <input type="number" class="form-control"  placeholder="Ej: 35000" required>
+                        <input type="number" class="form-control"  placeholder="Ej: 35000" required name="kilometraje" >
                     </div>
 
                     <!-- Precio -->
                     <div class="mb-3">
                         <label for="precio" class="form-label">Precio ($)</label>
-                        <input type="number" class="form-control"  placeholder="Ej: 50000000" required>
+                        <input type="number" class="form-control"  placeholder="Ej: 50000000" required name="precio" >
                     </div>
 
                     <button type="submit" class="btn btn-primary">Agregar Vehículo</button>
@@ -62,7 +61,7 @@
             <!-- Columna derecha: Contenedor de tarjetas -->
             <div class="col-md-6" id="cont-cards">
                 <h2 class="mb-3">Vehículos Registrados</h2>
-                <div class="row g-3">
+                <div id="cont-list-cars" class="row g-3">
                     <!-- Ejemplo de tarjeta -->
                     <div class="col-md-6 item-vehiculo">
                         <div class="card h-100">
@@ -70,17 +69,18 @@
                             <div class="card-body">
                                 <h3 class="card-title">Corolla</h3>
                                 <h4 class="card-subtitle text-muted">Toyota</h4>
-                                <h4 class="card-text">Modelo: 2021</h4>
-                                <h4 class="card-text">Kilometraje: 35,000 km</h4>
-                                <h2 class="text-success">$50,000,000</h2>
+                                <h4 class="card-text modelo-vehiculo">Modelo: 2021</h4>
+                                <h4 class="card-text kilometro-vehiculo">Kilometraje: 35,000 km</h4>
+                                <h2 class="text-success precio-vehiculo">$50,000,000</h2>
                                 <div class="d-flex justify-content-between mt-3">
-                                    <button class="btn btn-success">Comprar</button>
-                                    <button class="btn btn-danger">Eliminar</button>
+                                    <button class="btn btn-success btn-comprar">Comprar</button>
+                                    <button class="btn btn-danger btn-eliminar">Eliminar</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Aquí se irán agregando las demás tarjetas dinámicamente con JS -->
+
                 </div>
             </div>
         </div>
