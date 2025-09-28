@@ -1,126 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monda:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 
 body {
-    background: #333;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1f1f1f;
+    font-family: "Raleway", sans-serif;
 }
 
-h2 {
-    color: #eaeef3;
+#button-carrito{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #1e1f1f;
+    background:  #fcfc91;
+    width: 5%;
+    height: 40px;
+    border: 2px solid #198754;
+}
+
+h2{
+    color:  #fcfc91;
     font-weight: 600;
 }
 
-#form {
-    background-color: #df921f;
+#form{
+    background: #198754;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-#vehiculo-form .form-control {
-    border-radius: 8px;
-}
-
-#vehiculo-form button {
+#vehiculo-form button{
     width: 100%;
-    border-radius: 8px;
-    padding: 10px;
-    font-weight: 600;
-    transition: all 0.3s ease-in-out;
 }
 
 #vehiculo-form button:hover {
     background-color: #252628;
 }
 
-#cont-cards {
-    padding-left: 20px;
+.color{
+    background:#1e2c3b;
 }
 
-.card {
-    border: 1px solid #e0e0e0;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    background-color: #ffffff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-}
 
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 1px solid #e0e0e0;
-}
 
-.card-body {
-    padding: 20px;
-}
-
-.card-title {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.card-subtitle {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.card-text {
-    font-size: 1rem;
-    color: #444;
-}
-
-.precio-vehiculo {
-    font-size: 1.5rem;
-    color: #28a745;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.d-flex.justify-content-between.mt-3 {
-    margin-top: 20px;
-}
-
-.btn {
-    border-radius: 10px;
-    padding: 8px 14px;
-    font-size: 0.95rem;
-    font-weight: 500;
-}
-
-.btn-success {
-    background-color: #28a745;
-    border: none;
-}
-
-.btn-success:hover {
-    background-color: #218838;
-}
-
-.btn-danger {
-    background-color: #dc3545;
-    border: none;
-}
-
-.btn-danger:hover {
-    background-color: #c82333;
-}
-
-.precio-vehiculo {
-    font-size: 1.3rem;
-    font-weight: bold;
-}
 
