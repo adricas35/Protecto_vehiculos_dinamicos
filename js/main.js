@@ -124,10 +124,15 @@ function addProductCar(item) {
     nombre_carrito = item.querySelector('.card-title').textContent;
     marca_carrito = item.querySelector('.card-subtitle').textContent;
     precio_carrito = item.querySelector('.text-success').textContent;
+    const kilometraje_carro = item.querySelector('.kilometro-vehiculo').textContent;
+    const modelo_carro = item.querySelector('.modelo-vehiculo').textContent;
 
     const nombre_marca = marca_carrito.split(':');
     const precioReal = precio_carrito.split('$');
-    const newCartItem = addToCart(foto_carrito, nombre_carrito, nombre_marca[1].trim(), precioReal[1].trim());
+    const kilometraje_real = kilometraje_carro.split(':');
+    const modelo_real = modelo_carro.split(':');
+
+    const newCartItem = addToCart(foto_carrito, nombre_carrito, nombre_marca[1].trim(), precioReal[1].trim(), kilometraje_real[1].trim(), modelo_real[1].trim());
 
     contCarrito.appendChild(newCartItem);
     actualizarTotal(precioReal[1].trim());
@@ -139,7 +144,7 @@ function eventsToItem(item) {
     const comprar = item.querySelector('.b-comprar');
     comprar.addEventListener('click', () => {
         addProductCar(item);
-        alert('Compra con exito');
+        alert('Producto agregado al carrito de compras');
     })
 
     const deleteBtn = item.querySelector(".b-eliminar");
@@ -148,21 +153,24 @@ function eventsToItem(item) {
     })
 }
 
-function setCarToList(foto_carrito, nombre_carro, marca_carro, precio_carro) {
+function setCarToList(foto_carrito, nombre_carro, marca_carro, precio_carro, kilometraje_carro, modelo_carro) {
     const listCarros = JSON.parse(localStorage.getItem('carros')) || [];
     listCarros.push({
         foto: foto_carrito,
         nombre: nombre_carro,
         marca: marca_carro,
-        precio: precio_carro
+        precio: precio_carro,
+        kilometraje: kilometraje_carro,
+        modelo: modelo_carro,
     });
 
     localStorage.setItem('carros', JSON.stringify(listCarros));
 }
 
+// funcion  pata eliminar el registro del carro del localStorage
 function deleteCarToList(nombre_carro, marca_carro) {
     const listCarros = JSON.parse(localStorage.getItem('carros')) || [];
-    
+    // se valida si exixten registros en el arreglo 
     if (listCarros.length > 0) {
         const indexCarroEliminar = listCarros.findIndex(objeto => objeto.nombre === nombre_carro && objeto.marca === marca_carro);
         // Actualizamos el valor del carrito
@@ -176,8 +184,8 @@ function deleteCarToList(nombre_carro, marca_carro) {
 }
 
 
-function addToCart(foto_carro, nombre_carro, marca_carro, precio_carro) {
-    setCarToList(foto_carro, nombre_carro, marca_carro, precio_carro);
+function addToCart(foto_carro, nombre_carro, marca_carro, precio_carro, kilometraje_carro, modelo_carro) {
+    setCarToList(foto_carro, nombre_carro, marca_carro, precio_carro, kilometraje_carro, modelo_carro);
     const item = document.createElement('div');
     item.classList.add('col-md-6', 'item-vehiculo-carrito');
 
@@ -239,5 +247,4 @@ function actualizarTotal(precio) {
     totalCarrito += Number(valor);
     contTotalCarrito.textContent = 'Total: $ ' + totalCarrito;
 }
-
 

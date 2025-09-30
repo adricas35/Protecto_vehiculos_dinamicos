@@ -7,29 +7,32 @@ body {
     font-family: "Raleway", sans-serif;
 }
 
-#button-carrito{
+#button-carrito {
     position: absolute;
     top: 20px;
     right: 20px;
     color: #1e1f1f;
-    background:  #fcfc91;
+    background: #fcfc91;
     width: 5%;
     height: 40px;
     border: 2px solid #198754;
+    border-radius: 10px;
 }
 
-h2{
-    color:  #fcfc91;
+h2 {
+    color: #fcfc91;
     font-weight: 600;
+    text-align: center;
 }
 
-#form{
+#form {
     background: #198754;
     padding: 30px;
     border-radius: 12px;
+    height: fit-content;
 }
 
-#vehiculo-form button{
+#vehiculo-form button {
     width: 100%;
 }
 
@@ -37,11 +40,42 @@ h2{
     background-color: #252628;
 }
 
-.color{
-    background:#1e2c3b;
+.color {
+    background: #1e2c3b;
 }
 
+table {
+    width: 90%;
+    max-width: 900px;
+    border-radius: 15px;
+    overflow: hidden; 
+}
 
+thead {
+    background-color: #198754;
+    padding: 10px;
+    color: #fcfc91;
+    font-weight: bold;
+}
 
+th,
+td {
+    padding: 20px;
+    text-align: center;
+}
 
+tbody td {
+    background-color: #198754;
+    color: aliceblue;
+} 
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+#tabla-carrito {
+    color: #1e1f1f;
+    width: 70%;
+    margin: 0 auto;
+}
 
