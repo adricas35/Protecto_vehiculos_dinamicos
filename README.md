@@ -84,7 +84,6 @@ Las contribuciones son bienvenidas. Si deseas ayudar a mejorar este proyecto, si
 Puedes encontrarme y seguirme en:
 
 - **GitHub:** https://github.com/adricas35
-- **LinkedIn:** https://www.linkedin.com/in/adriana-castillo-05aa10368/
 - **Correo Electrónico:** adricasra1993@gmail.com
 
 ---
