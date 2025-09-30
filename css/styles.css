@@ -7,6 +7,10 @@ body {
     font-family: "Raleway", sans-serif;
 }
 
+.row{
+    background: #1f1f1f;
+}
+
 #button-carrito {
     position: absolute;
     top: 20px;
